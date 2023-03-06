@@ -1,0 +1,62 @@
+{
+  "icons": [
+    {
+      "src": "./icon_512x512.24fefe981f3a0f38eef76fed12a4eeaf.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_384x384.18a7d94a217e950890690d056c7ac989.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_256x256.468ee4356c6648ad3032d868c0088a1f.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_192x192.f83237fa7a08449db9611d2dc33164dd.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_168x168.52f5599a0806fc48939f88b52b1406fa.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_144x144.69b83844d9b14318923681e36f75657f.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_128x128.4ab60bef091b8f9d50da792be11e7117.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_96x96.648ed5d9e7343564fe64ba4fc768f5fc.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_72x72.5e178312b1256b53d7a670a71a9466f3.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_48x48.c750c6feaadaf76db488dbcd96f7ab1f.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "name": "Mikado",
+  "short_name": "Mikado",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "background_color": "#fff",
+  "theme_color": "#4285f4",
+  "description": "Mikado method tool"
+}

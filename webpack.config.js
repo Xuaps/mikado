@@ -6,12 +6,12 @@ const Dotenv = require("dotenv-webpack");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = ({ env }) => ({
-  entry: "./src/main.ts",
+  entry: "./src/app/main.ts",
   devtool: "source-map",
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -19,37 +19,37 @@ module.exports = ({ env }) => ({
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource"
-      }
-    ]
+        type: "asset/resource",
+      },
+    ],
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".json"],
   },
   devServer: {
     port: 3000,
     open: true,
     hot: true,
     static: {
-      directory: path.join(__dirname, "dist")
-    }
+      directory: path.join(__dirname, "dist"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "public/index.html",
       hash: true, // cache busting
       output: {
-        filename: "index.html"
-      }
+        filename: "index.html",
+      },
     }),
     new WebpackPwaManifest({
       name: "Mikado",
@@ -68,16 +68,16 @@ module.exports = ({ env }) => ({
       icons: [
         {
           src: path.resolve("public/assets/mikado.png"),
-          sizes: [48, 72, 96, 128, 144, 168, 192, 256, 384, 512] // multiple sizes
-        }
-      ]
+          sizes: [48, 72, 96, 128, 144, 168, 192, 256, 384, 512], // multiple sizes
+        },
+      ],
     }),
     new WorkboxPlugin.InjectManifest({
       maximumFileSizeToCacheInBytes: 4194304,
       swSrc: path.resolve(__dirname, "/src/sw/sw.js"),
-      swDest: "sw.js"
+      swDest: "sw.js",
     }),
     new NodePolyfillPlugin(),
-    new Dotenv()
-  ]
+    new Dotenv(),
+  ],
 });

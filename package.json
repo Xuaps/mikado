@@ -11,8 +11,8 @@
     "lint": "eslint --ext ts,tsx src",
     "lint:fix": "eslint --ext ts,tsx src --fix",
     "lint:staged": "lint-staged",
-    "typecheck": "tsc --noEmit --project src/tsconfig.json",
-    "typecheck:watch": "tsc --noEmit --watch --project src/tsconfig.json",
+    "typecheck": "tsc --noEmit --project src/app/tsconfig.json",
+    "typecheck:watch": "tsc --noEmit --watch --project src/app/tsconfig.json",
     "prepare": "husky install"
   },
   "lint-staged": {

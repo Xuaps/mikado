@@ -1,4 +1,8 @@
+import newMikado from "./mikado";
 import "./style.css";
+import * as ui from "./ui";
+
+const mikado = newMikado();
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -12,3 +16,11 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
+
+const onGoalSetted = (goal: string) => {
+  mikado.setGoal(goal);
+  const { title, startingTime } = mikado.getGoal();
+  ui.update(title, startingTime);
+};
+
+ui.init(onGoalSetted);

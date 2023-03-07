@@ -10,13 +10,10 @@
     "test:watch": "jest --watch",
     "lint": "eslint --ext ts,tsx src",
     "lint:fix": "eslint --ext ts,tsx src --fix",
-    "lint:staged": "lint-staged",
+    "lint:staged": "lint-staged -c .lintstagedrc.json",
     "typecheck": "tsc --noEmit --project src/app/tsconfig.json",
     "typecheck:watch": "tsc --noEmit --watch --project src/app/tsconfig.json",
     "prepare": "husky install"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": "eslint --fix"
   },
   "keywords": [],
   "author": "",

@@ -1,17 +1,21 @@
-export function init(onSubmit: (goal: string) => void) {
-  const form: HTMLElement = document.getElementById("form");
-  function setGoal(e: { preventDefault: () => void }) {
-    const formData = new FormData(form as HTMLFormElement);
-    onSubmit(formData.get("goal").toString());
+export function update(
+  content: string,
+  events: {
+    name: string;
+    event: string;
+    callback: (props: any) => [content: string, events: []];
+  }[]
+) {
+  document.getElementById("root").innerHTML = content;
+  if (events.length > 0) {
+    const element = document.getElementById(events[0].name);
+    const callback = (e: { preventDefault: () => void }) => {
+      const formData = new FormData(element as HTMLFormElement);
+      update(...events[0].callback(formData));
 
-    e.preventDefault();
+      e.preventDefault();
+    };
+
+    element.addEventListener(events[0].event, callback);
   }
-
-  form.addEventListener("submit", setGoal);
-}
-
-export function update(title: string, startingTime: number) {
-  document.getElementById(
-    "root"
-  ).innerHTML = `<p>${title} - ${startingTime}</p>`;
 }

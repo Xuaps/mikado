@@ -6,6 +6,7 @@ const Dotenv = require("dotenv-webpack");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = ({ env }) => ({
+  experiments: { asyncWebAssembly: true },
   entry: "./src/app/main.ts",
   devtool: "source-map",
   mode: "development",

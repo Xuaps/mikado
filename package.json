@@ -51,5 +51,8 @@
     "webpack-dev-server": "^4.5.0",
     "webpack-pwa-manifest": "^4.3.0",
     "workbox-webpack-plugin": "^6.5.4"
+  },
+  "dependencies": {
+    "@automerge/automerge": "^2.0.2"
   }
 }

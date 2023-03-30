@@ -22,4 +22,4 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-ui.update(...newMikado());
+newMikado().then(ui.update);

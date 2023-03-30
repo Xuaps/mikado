@@ -1,20 +1,9 @@
 import renderForm from "./components/form";
 import setGoal from "./set-goal";
+import { View } from "./view";
 
-const newMikado = (): [
-  string,
-  { name: string; event: string; callback: (data: FormData) => [string, []] }[]
-] => {
-  return [
-    renderForm(),
-    [
-      {
-        name: "form",
-        event: "submit",
-        callback: setGoal,
-      },
-    ],
-  ];
+const newMikado = (): Promise<View> => {
+  return Promise.resolve(renderForm(setGoal));
 };
 
 export default newMikado;

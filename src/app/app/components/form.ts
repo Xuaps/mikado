@@ -1,4 +1,4 @@
-import { View } from "../infra/view";
+import { View } from "../view";
 
 export default function (onSubmit: (goal: string) => Promise<View>): View {
   return [

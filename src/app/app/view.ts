@@ -1,9 +1,9 @@
-export type Callback = (...props: any[]) => Promise<View>;
+export type CallbackHandler = (...props: any[]) => Promise<View>;
 
 export type Event = {
   name: string;
   event: string;
-  callback: Callback;
+  callback: CallbackHandler;
 };
 
 export type View = [string, Event[]];

@@ -1,6 +1,6 @@
 import "../style.css";
 import * as ui from "./ui";
-import newMikado from "../new-mikado";
+import onNewMikado from "../app/on-new-mikado";
 // import * as Automerge from "@automerge/automerge";
 
 // type MikadoDoc = {
@@ -22,4 +22,4 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-newMikado().then(ui.update);
+onNewMikado().then(ui.update);

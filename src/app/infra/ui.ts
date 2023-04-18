@@ -1,4 +1,4 @@
-import { View } from "./view";
+import { View } from "../app/view";
 
 export function update([content, events]: View) {
   document.getElementById("root").innerHTML = content;

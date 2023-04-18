@@ -7,7 +7,7 @@ const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = ({ env }) => ({
   experiments: { asyncWebAssembly: true },
-  entry: "./src/app/main.ts",
+  entry: "./src/app/infra/main.ts",
   devtool: "source-map",
   mode: "development",
   output: {

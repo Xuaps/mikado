@@ -1,6 +1,6 @@
-import "./style.css";
+import "../style.css";
 import * as ui from "./ui";
-import newMikado from "./new-mikado";
+import newMikado from "../new-mikado";
 // import * as Automerge from "@automerge/automerge";
 
 // type MikadoDoc = {

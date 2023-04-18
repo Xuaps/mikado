@@ -1,4 +1,4 @@
-import { View, Callback } from "../view";
+import { View, Callback } from "../infra/view";
 
 export default function (onSubmit: Callback): View {
   return [
@@ -11,7 +11,7 @@ export default function (onSubmit: Callback): View {
       {
         name: "form",
         event: "submit",
-        callback: onSubmit,
+        callback: (data: FormData) => onSubmit(data.get("goal").toString()),
       },
     ],
   ];

@@ -1,4 +1,4 @@
-import { View } from "../view";
+import { View } from "../infra/view";
 
 export default function ({
   title,

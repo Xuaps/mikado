@@ -1,6 +1,6 @@
-import { View, Callback } from "../infra/view";
+import { View } from "../infra/view";
 
-export default function (onSubmit: Callback): View {
+export default function (onSubmit: (goal: string) => Promise<View>): View {
   return [
     `
       <form id="form">
